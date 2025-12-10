@@ -1,5 +1,5 @@
 import java.awt.*;
-
+import OOPS.*;
 class Shape{
     String color;
 
@@ -39,5 +39,26 @@ public class Main {
 //        r1.area(4,5);
         r1.color="blue";
         r1.area(4,5);
+
+        // Encapsulation + Constructor
+        Animal a = new Animal("Lion", 6);
+        System.out.println(a.getName());
+        a.makeSound();
+
+        // Inheritance + Polymorphism
+        Dog d = new Dog("Buddy", 3, "Beagle");
+        System.out.println(d.getName() + " - " + d.getBreed());
+        d.makeSound();
+
+        // Abstraction
+        Sparrow sp = new Sparrow();
+        sp.fly();
+        sp.eat();
+
+        // Static Concept
+        new Counter();
+        new Counter();
+        System.out.println("Counter objects: " + Counter.getCount());
+
     }
 }
